@@ -479,8 +479,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "cstats.l"
-#line 2 "cstats.l"
+#line 1 "lex.cstats"
+#line 2 "lex.cstats"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -710,7 +710,7 @@ YY_DECL
 		}
 
 	{
-#line 15 "cstats.l"
+#line 15 "lex.cstats"
 
 
 #line 717 "lex.yy.c"
@@ -773,54 +773,54 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 17 "cstats.l"
+#line 17 "lex.cstats"
 { comments_count++; multi_line_count++; }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 18 "cstats.l"
+#line 18 "lex.cstats"
 { fprintf(stderr,"Error: unterminated multi-line comment\n"); exit(-1); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 19 "cstats.l"
+#line 19 "lex.cstats"
 { comments_count++; single_line_count++; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "cstats.l"
+#line 20 "lex.cstats"
 { keyword_count++; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 21 "cstats.l"
+#line 21 "lex.cstats"
 { identifiers_count++; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "cstats.l"
+#line 22 "lex.cstats"
 { symbol_count++; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 23 "cstats.l"
+#line 23 "lex.cstats"
 { decimal_count++; integers_count++; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 24 "cstats.l"
+#line 24 "lex.cstats"
 { octal_count++; integers_count++;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 25 "cstats.l"
+#line 25 "lex.cstats"
 { fprintf(stderr,"Error: invalid octal number %s\n", yytext); exit(-1);}
 	YY_BREAK
 case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
-#line 26 "cstats.l"
+#line 26 "lex.cstats"
 { string_count++; const char* text = yytext; while(*text){total_length++; text++;} total_length = total_length - 3;}
 	YY_BREAK
 case 11:
@@ -830,28 +830,28 @@ YY_LINENO_REWIND_TO(yy_cp - 1);
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 27 "cstats.l"
+#line 27 "lex.cstats"
 { fprintf(stderr,"Error: unterminated string: %s\n", yytext); exit(-1);}
 	YY_BREAK
 case 12:
 /* rule 12 can match eol */
 YY_RULE_SETUP
-#line 28 "cstats.l"
+#line 28 "lex.cstats"
 ; 
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 29 "cstats.l"
+#line 29 "lex.cstats"
 { /* Ignore whitespace */ }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 30 "cstats.l"
+#line 30 "lex.cstats"
 {fprintf(stderr,"Error: invalid character %s\n", yytext); exit(-1);}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 33 "cstats.l"
+#line 33 "lex.cstats"
 ECHO;
 	YY_BREAK
 #line 858 "lex.yy.c"
@@ -1859,7 +1859,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 33 "cstats.l"
+#line 33 "lex.cstats"
 
 
 int main(int argc, char **argv) {
